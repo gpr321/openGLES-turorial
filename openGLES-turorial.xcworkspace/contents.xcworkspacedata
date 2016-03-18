@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:02-Animation/02-Animation.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:GLESTool/GLESTool.xcodeproj">
    </FileRef>
    <FileRef

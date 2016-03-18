@@ -1,6 +1,6 @@
 //
-//  _1_helloworldtriangleUITests.m
-//  01-helloworldtriangleUITests
+//  _2_AnimationUITests.m
+//  02-AnimationUITests
 //
 //  Created by peironggao on 16/3/16.
 //  Copyright © 2016年 gaopeirong. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface _1_helloworldtriangleUITests : XCTestCase
+@interface _2_AnimationUITests : XCTestCase
 
 @end
 
-@implementation _1_helloworldtriangleUITests
+@implementation _2_AnimationUITests
 
 - (void)setUp {
     [super setUp];

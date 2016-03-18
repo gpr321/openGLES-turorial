@@ -1,6 +1,6 @@
 //
 //  AppDelegate.h
-//  01-helloworldtriangle
+//  02-Animation
 //
 //  Created by peironggao on 16/3/16.
 //  Copyright © 2016年 gaopeirong. All rights reserved.

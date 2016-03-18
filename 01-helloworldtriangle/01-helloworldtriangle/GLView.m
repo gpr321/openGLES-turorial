@@ -154,7 +154,7 @@
     glDrawArrays(GL_TRIANGLES, 0, 3);
     
     // 渲染
-    [_ctx presentRenderbuffer:GL_FRAMEBUFFER];
+    [_ctx presentRenderbuffer:GL_RENDERBUFFER];
 }
 
 @end

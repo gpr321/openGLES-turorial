@@ -72,3 +72,10 @@ GLuint gl_tool_build_program(const char * vertex, const char * fragment)
     return p;
 }
 
+GLuint gl_tool_build_program_from_file(NSString *vFileName, NSString *fFileName)
+{
+    NSString *vertexShaderString = [[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:vFileName ofType:nil] encoding:NSUTF8StringEncoding error:NULL];
+    NSString *fragmentShaderString = [[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:fFileName ofType:nil] encoding:NSUTF8StringEncoding error:NULL];
+    
+    return gl_tool_build_program([vertexShaderString cStringUsingEncoding:NSUTF8StringEncoding], [fragmentShaderString cStringUsingEncoding:NSUTF8StringEncoding]);
+}

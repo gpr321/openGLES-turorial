@@ -29,4 +29,4 @@ break;\
 
 GLuint gl_tool_compile_shader(GLuint type, const char * source);
 GLuint gl_tool_build_program(const char * vertex, const char * fragment);
-
+GLuint gl_tool_build_program_from_file(NSString *vFileName, NSString *fFileName);
