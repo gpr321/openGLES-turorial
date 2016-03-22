@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "GLView.h"
+#import "OpenGLView.h"
 
 @interface ViewController ()
 
@@ -19,7 +20,7 @@
 {
     [super viewDidLoad];
     
-    GLView *glView = [[GLView alloc] initWithFrame:self.view.bounds];
+    OpenGLView *glView = [[OpenGLView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:glView];
 }
 

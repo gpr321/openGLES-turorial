@@ -20,6 +20,7 @@
 		104A3C101C9D8BAE0096BC4E /* vertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 104A3C0F1C9D8BAE0096BC4E /* vertexShader.glsl */; };
 		109E28B11CA04BEF0045CFDF /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 109E28B01CA04BEF0045CFDF /* SimpleVertex.glsl */; };
 		109E28B31CA04C110045CFDF /* SimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 109E28B21CA04C110045CFDF /* SimpleFragment.glsl */; };
+		10D3D5CF1CA1989D00062152 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D3D5CE1CA1989D00062152 /* OpenGLView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		104A3C0F1C9D8BAE0096BC4E /* vertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertexShader.glsl; sourceTree = "<group>"; };
 		109E28B01CA04BEF0045CFDF /* SimpleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleVertex.glsl; sourceTree = "<group>"; };
 		109E28B21CA04C110045CFDF /* SimpleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleFragment.glsl; sourceTree = "<group>"; };
+		10D3D5CD1CA1989D00062152 /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLView.h; sourceTree = "<group>"; };
+		10D3D5CE1CA1989D00062152 /* OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				104A3C0F1C9D8BAE0096BC4E /* vertexShader.glsl */,
 				109E28B01CA04BEF0045CFDF /* SimpleVertex.glsl */,
 				109E28B21CA04C110045CFDF /* SimpleFragment.glsl */,
+				10D3D5CD1CA1989D00062152 /* OpenGLView.h */,
+				10D3D5CE1CA1989D00062152 /* OpenGLView.m */,
 			);
 			path = "03-VBO";
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 				104A3C0A1C9D89430096BC4E /* GLView.m in Sources */,
 				104A3BE81C9D89020096BC4E /* AppDelegate.m in Sources */,
 				104A3BE51C9D89020096BC4E /* main.m in Sources */,
+				10D3D5CF1CA1989D00062152 /* OpenGLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

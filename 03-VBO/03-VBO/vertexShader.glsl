@@ -1,7 +1,7 @@
 attribute vec4 aPosition;
 attribute vec4 aColor;
 
-varying highp vec4 vColor;
+varying vec4 vColor;
 
 void main()
 {
