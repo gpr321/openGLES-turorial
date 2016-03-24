@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "GLView.h"
 #import "OpenGLView.h"
 
 @interface ViewController ()

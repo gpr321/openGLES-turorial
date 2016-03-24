@@ -24,6 +24,11 @@
     
     GLuint          _aPosition;
     GLuint          _aColor;
+    
+    GLuint          _vao;
+    
+    GLuint          _vertexVBO;
+    GLuint          _colorVBO;
 }
 
 @end
@@ -43,6 +48,7 @@
         [self setUpLayer];
         [self setUpGLContext];
         [self setUpProgram];
+        [self setUpVBO];
     }
     return self;
 }
@@ -70,6 +76,40 @@
     // 设置描绘属性，在这里设置不维持渲染内容以及颜色格式为 RGBA8
     _eaglLayer.drawableProperties = [NSDictionary dictionaryWithObjectsAndKeys:
                                      [NSNumber numberWithBool:NO], kEAGLDrawablePropertyRetainedBacking, kEAGLColorFormatRGBA8, kEAGLDrawablePropertyColorFormat, nil];
+}
+
+- (void)setUpVBO
+{
+    GLfloat vertices[] = {
+        0.0f,  0.5f, 0.0f,
+        -0.5f, -0.5f, 0.0f,
+        0.5f,  -0.5f, 0.0f
+    };
+    
+    GLfloat colors[] = {
+        1.0, 0.0, 0.0, 1.0,
+        0.0, 1.0, 0.0, 1.0,
+        0.0, 0.0, 1.0, 1.0,
+    };
+    
+    glGenBuffers(1, &_vertexVBO);
+    glBindBuffer(GL_ARRAY_BUFFER, _vertexVBO);
+    glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(GLfloat), vertices, GL_STATIC_DRAW);
+    
+    glGenBuffers(1, &_colorVBO);
+    glBindBuffer(GL_ARRAY_BUFFER, _colorVBO);
+    glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(GLfloat), colors, GL_STATIC_DRAW);
+    
+    glGenVertexArraysOES(1, &_vao);
+    glBindVertexArrayOES(_vao);
+    glEnableVertexAttribArray(_aPosition);
+    glEnableVertexAttribArray(_aColor);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, _vertexVBO);
+    glVertexAttribPointer(_aPosition, 3, GL_FLOAT, GL_FALSE, 0, NULL);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, _colorVBO);
+    glVertexAttribPointer(_aColor, 4, GL_FLOAT, GL_FALSE, 0, NULL);
 }
 
 - (void)setUpGLContext
@@ -132,26 +172,45 @@
     // 设定帧的视口大小
     glViewport(0, 0, _renderWidth, _renderHeight);
     
-    GLfloat vertices[] = {
-        0.0f,  0.5f, 0.0f,
-        -0.5f, -0.5f, 0.0f,
-        0.5f,  -0.5f, 0.0f };
+//    GLfloat vertices[] = {
+//        0.0f,  0.5f, 0.0f,
+//        -0.5f, -0.5f, 0.0f,
+//        0.5f,  -0.5f, 0.0f
+//    };
+//    
+//    GLubyte colors[] = {
+//        1.0, 0.0, 0.0, 1.0,
+//        0.0, 1.0, 0.0, 1.0,
+//        0.0, 0.0, 1.0, 1.0,
+//    };
+//    
+//    // 导入顶点数据
+//    glVertexAttribPointer(_aPosition, 3, GL_FLOAT, GL_FALSE, 0, vertices);
+//    glEnableVertexAttribArray(_aPosition);
+//    
+//    glVertexAttribPointer(_aColor, 4, GL_UNSIGNED_BYTE, GL_FALSE, 0, colors);
+//    glEnableVertexAttribArray(_aColor);
     
-    GLubyte colors[] = {
-        1.0, 0.0, 0.0, 1.0,
-        0.0, 1.0, 0.0, 1.0,
-        0.0, 0.0, 1.0, 1.0,
-    };
+//    glDrawArrays(GL_TRIANGLES, 0, 3);
     
-    // 导入顶点数据
-    glVertexAttribPointer(_aPosition, 3, GL_FLOAT, GL_FALSE, 0, vertices);
-    glEnableVertexAttribArray(_aPosition);
-    
-    glVertexAttribPointer(_aColor, 4, GL_UNSIGNED_BYTE, GL_FALSE, 0, colors);
-    glEnableVertexAttribArray(_aColor);
+    // VAO
+    glBindVertexArrayOES(_vao);
     
     // 画三角形
     glDrawArrays(GL_TRIANGLES, 0, 3);
+    
+    glBindVertexArrayOES(0);
+    
+    // VBO
+//    glEnableVertexAttribArray(_aPosition);
+//    glEnableVertexAttribArray(_aColor);
+//    glBindBuffer(GL_ARRAY_BUFFER, _vertexVBO);
+//    glVertexAttribPointer(_aPosition, 3, GL_FLOAT, GL_FALSE, 0, NULL);
+//    
+//    glBindBuffer(GL_ARRAY_BUFFER, _colorVBO);
+//    glVertexAttribPointer(_aColor, 4, GL_FLOAT, GL_FALSE, 0, NULL);
+//    
+//    glDrawArrays(GL_TRIANGLES, 0, 3);
     
     // 渲染
     [_ctx presentRenderbuffer:GL_RENDERBUFFER];

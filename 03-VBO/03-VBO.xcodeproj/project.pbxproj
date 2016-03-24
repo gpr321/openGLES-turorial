@@ -14,7 +14,6 @@
 		104A3BF01C9D89020096BC4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104A3BEF1C9D89020096BC4E /* Assets.xcassets */; };
 		104A3BF31C9D89020096BC4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104A3BF11C9D89020096BC4E /* LaunchScreen.storyboard */; };
 		104A3BFE1C9D89020096BC4E /* _3_VBOUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 104A3BFD1C9D89020096BC4E /* _3_VBOUITests.m */; };
-		104A3C0A1C9D89430096BC4E /* GLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104A3C091C9D89430096BC4E /* GLView.m */; };
 		104A3C0C1C9D8A0C0096BC4E /* GLESTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 104A3C0B1C9D8A0C0096BC4E /* GLESTool.framework */; };
 		104A3C0E1C9D8B660096BC4E /* fragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 104A3C0D1C9D8B660096BC4E /* fragmentShader.glsl */; };
 		104A3C101C9D8BAE0096BC4E /* vertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 104A3C0F1C9D8BAE0096BC4E /* vertexShader.glsl */; };
@@ -47,8 +46,6 @@
 		104A3BF91C9D89020096BC4E /* 03-VBOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "03-VBOUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		104A3BFD1C9D89020096BC4E /* _3_VBOUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _3_VBOUITests.m; sourceTree = "<group>"; };
 		104A3BFF1C9D89020096BC4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		104A3C081C9D89430096BC4E /* GLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLView.h; sourceTree = "<group>"; };
-		104A3C091C9D89430096BC4E /* GLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLView.m; sourceTree = "<group>"; };
 		104A3C0B1C9D8A0C0096BC4E /* GLESTool.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLESTool.framework; path = "../../../Library/Developer/Xcode/DerivedData/openGLES-turorial-deefvehcaomwoffcoemmiiofbmfs/Build/Products/Debug-iphoneos/GLESTool.framework"; sourceTree = "<group>"; };
 		104A3C0D1C9D8B660096BC4E /* fragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragmentShader.glsl; sourceTree = "<group>"; };
 		104A3C0F1C9D8BAE0096BC4E /* vertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertexShader.glsl; sourceTree = "<group>"; };
@@ -108,8 +105,6 @@
 				104A3BF11C9D89020096BC4E /* LaunchScreen.storyboard */,
 				104A3BF41C9D89020096BC4E /* Info.plist */,
 				104A3BE31C9D89020096BC4E /* Supporting Files */,
-				104A3C081C9D89430096BC4E /* GLView.h */,
-				104A3C091C9D89430096BC4E /* GLView.m */,
 				104A3C0D1C9D8B660096BC4E /* fragmentShader.glsl */,
 				104A3C0F1C9D8BAE0096BC4E /* vertexShader.glsl */,
 				109E28B01CA04BEF0045CFDF /* SimpleVertex.glsl */,
@@ -242,7 +237,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				104A3BEB1C9D89020096BC4E /* ViewController.m in Sources */,
-				104A3C0A1C9D89430096BC4E /* GLView.m in Sources */,
 				104A3BE81C9D89020096BC4E /* AppDelegate.m in Sources */,
 				104A3BE51C9D89020096BC4E /* main.m in Sources */,
 				10D3D5CF1CA1989D00062152 /* OpenGLView.m in Sources */,
